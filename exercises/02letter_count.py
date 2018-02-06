@@ -31,3 +31,36 @@
 # letter_count('banana')
 #
 # > {'a': 3, 'b': 2}
+
+
+dd = {}
+dd["foo"] = 1
+dd["foo"] += 1
+if "foo" in dd:
+  print(dd["foo"])
+
+letters = {}
+
+# can do with n + 26??
+# for x in range(ord('a'), ord('z')):
+#   letters[chr(x)] = 0
+
+
+# did with 2n
+def letter_count(word):
+  for x in range(0, len(word)):
+    letters[word[x]] = 0
+  print(letters)
+  for x in range(0, len(word)):
+    letters[word[x]] += 1
+
+
+letter_count('banana')
+
+print(letters)
+
+def p_times(statement, num):
+  for x in range(0, num):
+    print(statement)
+
+p_times('hello there', 3)
